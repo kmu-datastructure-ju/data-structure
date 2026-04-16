@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "My Integer", "My Integer\My
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ArrayList", "ArrayList\ArrayList.vcxproj", "{607DD42B-3334-42DD-AC68-456446FE92D4}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SparseMatrix", "SparseMatrix\SparseMatrix.vcxproj", "{766E7C46-751B-4B90-87E9-B948900BB892}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -31,6 +33,14 @@ Global
 		{607DD42B-3334-42DD-AC68-456446FE92D4}.Release|x64.Build.0 = Release|x64
 		{607DD42B-3334-42DD-AC68-456446FE92D4}.Release|x86.ActiveCfg = Release|Win32
 		{607DD42B-3334-42DD-AC68-456446FE92D4}.Release|x86.Build.0 = Release|Win32
+		{766E7C46-751B-4B90-87E9-B948900BB892}.Debug|x64.ActiveCfg = Debug|x64
+		{766E7C46-751B-4B90-87E9-B948900BB892}.Debug|x64.Build.0 = Debug|x64
+		{766E7C46-751B-4B90-87E9-B948900BB892}.Debug|x86.ActiveCfg = Debug|Win32
+		{766E7C46-751B-4B90-87E9-B948900BB892}.Debug|x86.Build.0 = Debug|Win32
+		{766E7C46-751B-4B90-87E9-B948900BB892}.Release|x64.ActiveCfg = Release|x64
+		{766E7C46-751B-4B90-87E9-B948900BB892}.Release|x64.Build.0 = Release|x64
+		{766E7C46-751B-4B90-87E9-B948900BB892}.Release|x86.ActiveCfg = Release|Win32
+		{766E7C46-751B-4B90-87E9-B948900BB892}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
