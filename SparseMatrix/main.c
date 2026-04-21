@@ -19,8 +19,8 @@ int main() {
 	printSparseMatrix(sm2);
 
 	sparseMatrix* sm3 = addSparseMatrix(sm1, sm2);
-	printf("add 직후\n");
+	printf("below to add\n");
 
 	printSparseMatrix(sm3);
-	printf("print 직후\n");
+	printf("below to print\n");
 }

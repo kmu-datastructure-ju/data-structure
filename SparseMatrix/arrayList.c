@@ -97,7 +97,7 @@ int replaceItemArrayList(arrayList* al,
 }
 
 void printArrayList(arrayList* al) {
-	printf("희소 행렬 순차 리스트: ");
+	printf("Sparse Matrix Array List: ");
 
 	printf("Cap: %d, size: %d", al->capacity, al->size);
 

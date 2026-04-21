@@ -16,7 +16,7 @@ int addElementSparseMatrix(sparseMatrix* sm, int row, int col, int value) {
 }
 
 int printSparseMatrix(sparseMatrix* sm) {
-	printf("희소행렬입니다\n");
+	printf("Sparse Matrix: \n");
 
 	printArrayList(sm);
 }

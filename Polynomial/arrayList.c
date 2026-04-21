@@ -61,7 +61,7 @@ int insertArrayList(arrayList* al,
 elementArrayList deleteArrayList(
 	arrayList* al, int pos) {
 	if (pos < 0 || pos > al->size - 1) {
-		return 0;
+		return (elementArrayList) { 0, 0 };
 	}
 
 	elementArrayList item = al->data[pos];
@@ -101,7 +101,8 @@ void printArrayList(arrayList* al) {
 	printf("Array List: ");
 
 	for (int i = 0; i < al->size; i++) {
-		printf("%d ", al->data[i]);
+		printf("(%d %d)", al->data[i].coef, 
+			al->data[i].expo);
 	}
 }
 
