@@ -44,6 +44,7 @@ LinkedList* insertFirstLinkedList(LinkedList* li, PointType item) {
 int printLinkedList(LinkedList* li) {
 	PointType* current = li->head;
 	printf("LinkedList:\n");
+	printf("LinkedList size: %d\n", li->size);
 
 	for (int i = 0; i < li->size; i++) {
 		printf("[%d] x:%d, y:%d, next:%x\n", 
@@ -75,7 +76,7 @@ LinkedList* deleteAtLinkedList(LinkedList* li, int at) {
 	if (at >= 0 && at < li->size) {
 		PointType* nPtr = li->head;
 
-		for (int i = 0; i < at; i++) {
+		for (int i = 0; i < at - 1; i++) {
 			nPtr = nPtr->next;
 		}
 
@@ -89,5 +90,81 @@ LinkedList* deleteAtLinkedList(LinkedList* li, int at) {
 			nPtr->next = fPtr->next;
 			free(fPtr);
 		}
+
+		li->size--;
+	}
+}
+
+LinkedList* insertItemLinkedList(LinkedList* li, PointType* pre, 
+	PointType item) {
+
+	PointType* nPtr = (PointType*)malloc(sizeof(PointType));
+	*nPtr = item;
+
+	if (pre != NULL) {
+		nPtr->next = pre->next;
+		pre->next = nPtr;
+	}
+	else {
+		nPtr->next = li->head;
+		li->head = nPtr;
+	}
+
+	li->size++;
+}
+
+PointType deleteFirstLinkedList(LinkedList* li) {
+	if (li->size != 0) {
+		PointType* tPtr = li->head;
+		li->head = tPtr->next;
+
+		PointType temp = *tPtr;
+		free(tPtr);
+
+		li->size--;
+		return temp;
+	}
+	else {
+		return (PointType) { 0, 0, 0 };
+	}
+}
+
+PointType deleteLastLinkedList(LinkedList* li) {
+	PointType* pre;
+	PointType* iPtr;
+
+	pre = li->head;
+
+	if (pre == NULL) {
+		return (PointType) { 0, 0, 0 };
+	}
+
+	iPtr = pre->next;
+
+	if (iPtr == NULL) {
+		li->head = NULL;
+
+		PointType temp;
+		temp = *pre;
+
+		free(pre);
+		li->size--;
+
+		return temp;
+	}
+	else {
+		while (iPtr->next != NULL) {
+			pre = iPtr;
+			iPtr = iPtr->next;
+		}
+
+		PointType temp;
+		temp = *iPtr;
+
+		pre->next = NULL;
+		free(iPtr);
+		li->size--;
+
+		return temp;
 	}
 }
